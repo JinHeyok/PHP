@@ -151,8 +151,10 @@
 
     ?>
     <form action="study2.php" method="POST">
-        이름: <input type="text" name="name"><br>
-        이메일 : <input type="text" name="email"><br>
+        이름:
+        <input type="text" name="name"><br>
+        이메일 :
+        <input type="text" name="email"><br>
         <input type="submit">
     </form>
     <?php
@@ -176,8 +178,10 @@
     ?>
     <form action="study3.php" method="GET">
 
-        아이디 : <input type="text" name="id"><br>
-        비밀번호 : <input type="text" name="password"><br>
+        아이디 :
+        <input type="text" name="id"><br>
+        비밀번호 :
+        <input type="text" name="password"><br>
         <input type="submit" value="로그인">
     </form>
     <?php
@@ -248,29 +252,33 @@
     ?>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
-        이름 : <input type="text" name="name">
+        이름 :
+        <input type="text" name="name">
 
         성별 :
 
         <input type="radio" name="gender" value="female">여자
 
-        <input type="radio" name="gender" value="male">남자
+        <input type="radio" name="gender" value="male">남자 이메일 :
+        <input type="text" name="email">
 
-        이메일 : <input type="text" name="email">
-
-        홈페이지 : <input type="text" name="website">
+        홈페이지 :
+        <input type="text" name="website">
 
         관심 있는 분야 :
 
-        <input type="checkbox" name="favtopic[]" value="movie"> 영화
+        <input type="checkbox" name="favtopic[]" value="movie">
+        영화
 
-        <input type="checkbox" name="favtopic[]" value="music"> 음악
+        <input type="checkbox" name="favtopic[]" value="music">
+        음악
 
-        <input type="checkbox" name="favtopic[]" value="game"> 게임
+        <input type="checkbox" name="favtopic[]" value="game">
+        게임
 
-        <input type="checkbox" name="favtopic[]" value="coding"> 코딩
-
-        기타 : <textarea name="comment"></textarea>
+        <input type="checkbox" name="favtopic[]" value="coding">
+        코딩 기타 :
+        <textarea name="comment"></textarea>
 
         <input type="submit" value="전송">
 
@@ -295,31 +303,47 @@
 
         <p class="alert">* : 필수 입력 사항</p>
 
-        이름 : <input type="text" name="name"><span class="alert"> * <?php echo $nameMsg ?></span>
+        이름 :
+        <input type="text" name="name">
+        <span class="alert">
+            *
+            <?php echo $nameMsg ?></span>
 
         성별 :
 
         <input type="radio" name="gender" value="female">여자
 
-        <input type="radio" name="gender" value="male">남자 <span class="alert"> * <?php echo $genderMsg ?></span>
+        <input type="radio" name="gender" value="male">남자
+        <span class="alert">
+            *
+            <?php echo $genderMsg ?></span>
 
-        이메일 : <input type="text" name="email">
+        이메일 :
+        <input type="text" name="email">
 
-        홈페이지 : <input type="text" name="website">
+        홈페이지 :
+        <input type="text" name="website">
 
         관심 있는 분야 :
 
-        <input type="checkbox" name="favtopic[]" value="movie"> 영화
+        <input type="checkbox" name="favtopic[]" value="movie">
+        영화
 
-        <input type="checkbox" name="favtopic[]" value="music"> 음악
+        <input type="checkbox" name="favtopic[]" value="music">
+        음악
 
-        <input type="checkbox" name="favtopic[]" value="game"> 게임
+        <input type="checkbox" name="favtopic[]" value="game">
+        게임
 
-        <input type="checkbox" name="favtopic[]" value="coding"> 코딩
+        <input type="checkbox" name="favtopic[]" value="coding">
+        코딩
 
-        <span class="alert"> * <?php echo $favtopicMsg ?></span>
+        <span class="alert">
+            *
+            <?php echo $favtopicMsg ?></span>
 
-        기타 : <textarea name="comment"></textarea>
+        기타 :
+        <textarea name="comment"></textarea>
 
         <input type="submit" value="전송">
 

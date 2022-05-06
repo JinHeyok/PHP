@@ -18,26 +18,33 @@
 
 <body>
     <?php
-    $board = array();
+    // $board = array();
     $result = mysqli_query($conn, $sql); //설정과 쿼리문 저장 넘김
     //$board = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    $board . (mysqli_fetch_array($result, MYSQLI_ASSOC));
+    $board = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+
+
+    $result_list =   array();
+    while ($row = mysqli_fetch_array($result)) {
+
+        // foreach ($row as $key => $rows) {
+        //     echo $rows;
+        // }
+
+
+
     ?>
-    <table border="1">
-        <tr>
-            <td>사원번호</td>
-            <td>사원이름</td>
-            <td>직업</td>
-            <td>관리자번호</td>
-            <td>입사날짜</td>
-            <td>월급</td>
-            <td>보너스</td>
-            <td>부서번호</td>
-        </tr>
-        <!-- <?php
-                // while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-                // echo ($row["ENAME"] . "\n" . $row["EMPNO"]) . PHP_EOL;
-                ?>
+        <table border="1">
+            <tr>
+                <td>사원번호</td>
+                <td>사원이름</td>
+                <td>직업</td>S
+                <td>입사날짜</td>
+                <td>월급</td>
+                <td>보너스</td>
+                <td>부서번호</td>
+            </tr>
             <tr>
                 <td><?= $row["EMPNO"]; ?></td>
                 <td><?= $row["ENAME"]; ?></td>
@@ -49,27 +56,13 @@
                 <td><?= $row["DEPTNO"]; ?></td>
                 </td>
             </tr>
-        <?php //} 
-        ?> -->
+        <?php
+    }
+        ?>
         <tr>
         </tr>
 
-    </table>
-    <?php
+        </table>
 
-    foreach ($board as $key => $value) {
-        echo $board[$value];
-    }
-    ?>
-    <!-- 
-    2차원 
-     -->
-    <!-- <% 
-    List empdto = request.Listparameter("empdto");
-    for(empDTO i : empdo){
-        int empno = i.getEmpno();
-    }
-    %> -->
-</body>
 
 </html>
